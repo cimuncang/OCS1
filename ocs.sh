@@ -30,19 +30,6 @@ cd
 
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 
-# check registered ip
-wget -q -O daftarip https://raw.githubusercontent.com/wilkingdead/setup2/master/ip.txt
-if ! grep -w -q $MYIP daftarip; then
-	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-	if [[ $vps = "FNS" ]]; then
-		echo "Powered by sshinjector.net"
-	else
-		echo "Powered by sshinjector.net"
-	fi
-	rm -f /root/daftarip
-	exit
-fi
-
 #https://github.com/adenvt/OcsPanels/wiki/tutor-debian
 
 clear
